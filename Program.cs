@@ -1,26 +1,23 @@
-﻿using System;
-//•	Hacer un programa que muestre la tabla de multiplicar del 1 al 10 de cualquier número.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Ejercicio1_Tabla_de_multiplicar_
+namespace Ejercicio1_Factorial_
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            string entrada = "";
-            int num = 0, total = 0;
-
-            Console.Write("Digite un numero para mostrar su tabla de multiplicar: ");
-            entrada = Console.ReadLine();
-            num = Convert.ToInt32(entrada);
-
-            Console.WriteLine("");
-
-            for (int i=1; i<=10; i++)
-            {
-                total = num * i;
-                Console.WriteLine("{0} x {1} = {2}", num, i, total);
-            }
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
